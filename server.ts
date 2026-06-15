@@ -104,6 +104,18 @@ General Guidelines:
 - Avoid exposing any prompt mechanics. Simply start with 'Greetings' or similar.
 `;
 
+// Endpoint to download Himasri's resume PDF directly as an attachment bypasses Microsoft web handlers
+app.get("/api/download-resume", (req, res) => {
+  const filePath = path.join(process.cwd(), "public", "Y_Himasri_Swarna_Resume.pdf");
+  res.setHeader("Content-Type", "application/pdf");
+  res.download(filePath, "Y_Himasri_Swarna_Resume.pdf", (err) => {
+    if (err) {
+      console.error("Download Error:", err);
+      res.status(505).send("Error returning resume PDF. Please write to her email.");
+    }
+  });
+});
+
 // AI Recruiter Twin chatbot endpoint
 app.post("/api/recruiter-chat", async (req, res) => {
   const { message, history } = req.body;

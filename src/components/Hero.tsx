@@ -76,10 +76,6 @@ export default function Hero({ onScrollToProjects, onScrollToContact, onScrollTo
     fileInputRef.current?.click();
   };
 
-  const handlePrintResume = () => {
-    window.print();
-  };
-
   return (
     <section className="relative py-12 lg:py-20 overflow-hidden bg-neutral-950/20">
       <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
@@ -143,13 +139,14 @@ export default function Hero({ onScrollToProjects, onScrollToContact, onScrollTo
                 <Sparkles className="w-4.5 h-4.5 text-[#8B5CF6]" />
               </button>
 
-              <button
-                onClick={handlePrintResume}
-                className="px-4.5 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 ml-auto sm:ml-0"
+              <a
+                href="/Y_Himasri_Swarna_Resume.pdf"
+                download="Y_Himasri_Swarna_Resume.pdf"
+                className="px-4.5 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 ml-auto sm:ml-0 no-underline"
               >
                 <FileText className="w-4 h-4 text-emerald-400" />
-                <span>Save/Print PDF</span>
-              </button>
+                <span>View / Download Resume</span>
+              </a>
             </div>
           </motion.div>
 
