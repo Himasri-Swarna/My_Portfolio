@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Github, ExternalLink, Sparkles, Code, Check, Layers, ChevronDown, ChevronUp } from "lucide-react";
+import { Github, ExternalLink, Sparkles, Code, Check, Layers, ChevronDown, ChevronUp, Maximize2, X } from "lucide-react";
 import { PROJECTS_DATA } from "../data";
 import { Project } from "../types";
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState<'All' | 'AI/ML' | 'UI/UX'>('All');
   const [expandedProjectId, setExpandedProjectId] = useState<string | null>(null);
+  const [selectedImageUrl, setSelectedImageUrl] = useState<string | null>(null);
 
   const filteredProjects = PROJECTS_DATA.filter((project) => {
     if (activeCategory === 'All') return true;
@@ -78,14 +79,25 @@ export default function Projects() {
 
                   {/* Hyper-realistic Project Thumbnail Illustration */}
                   {project.imageUrl && (
-                    <div className="h-44 w-full relative overflow-hidden bg-neutral-950 border-b border-white/5 select-none pointer-events-none">
+                    <div 
+                      onClick={() => setSelectedImageUrl(project.imageUrl || null)}
+                      className="h-56 w-full relative overflow-hidden bg-neutral-950 border-b border-white/10 cursor-zoom-in group/img select-none"
+                      title="Click to view full image study"
+                    >
                       <img
                         src={project.imageUrl}
                         alt={project.name}
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                        className="w-full h-full object-cover object-top group-hover/img:scale-102 transition-transform duration-500 ease-out"
                         referrerPolicy="no-referrer"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c]/80 via-transparent to-[#0a0a0c]/20" />
+                      {/* Gradient overlay that subtly disappears on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c]/90 via-transparent to-black/35 group-hover/img:via-transparent transition-all duration-300" />
+                      
+                      {/* Interactive Zoom Indicator */}
+                      <div className="absolute top-3 right-3 bg-black/85 backdrop-blur-md border border-white/15 px-2.5 py-1.5 rounded-full flex items-center gap-1.5 text-[10px] font-mono text-white opacity-85 group-hover/img:opacity-100 group-hover/img:scale-105 transition-all duration-300 shadow-lg">
+                        <Maximize2 className="w-3.5 h-3.5 text-[#00D4FF]" />
+                        <span>Zoom Study</span>
+                      </div>
                     </div>
                   )}
 
@@ -221,6 +233,64 @@ export default function Projects() {
             })}
           </AnimatePresence>
         </div>
+
+        {/* Fullscreen Lightbox Modal for viewing high-res project studies in full */}
+        <AnimatePresence>
+          {selectedImageUrl && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 bg-[#070709]/95 backdrop-blur-xl flex flex-col items-center justify-center p-4 sm:p-6"
+              onClick={() => setSelectedImageUrl(null)}
+            >
+              {/* Top Controls Nav Bar */}
+              <div className="absolute top-4 right-4 z-50 flex items-center gap-3">
+                <a
+                  href={selectedImageUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-4 py-2 rounded-xl text-xs font-mono transition-all flex items-center gap-1.5 cursor-pointer no-underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <ExternalLink className="w-3.5 h-3.5 text-[#00D4FF]" />
+                  <span>Open Original Link</span>
+                </a>
+                <button
+                  onClick={() => setSelectedImageUrl(null)}
+                  className="p-2.5 rounded-xl bg-white/5 hover:bg-red-500/20 hover:text-red-400 border border-white/10 hover:border-red-500/30 text-neutral-400 transition-all cursor-pointer flex items-center justify-center"
+                  title="Close Fullscreen View"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Central high fidelity uncropped illustration view container */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 15 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 15 }}
+                transition={{ type: "spring", damping: 25, stiffness: 180 }}
+                className="relative max-w-full max-h-[85vh] md:max-h-[90vh] flex items-center justify-center select-none"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <img
+                  src={selectedImageUrl}
+                  alt="High resolution project showcase"
+                  className="max-w-[95vw] max-h-[80vh] md:max-h-[88vh] rounded-2xl border border-white/10 shadow-[0_0_50px_rgba(0,212,255,0.1)] object-contain transition-all"
+                  referrerPolicy="no-referrer"
+                />
+              </motion.div>
+
+              {/* Bottom Instructions Badge */}
+              <div className="absolute bottom-4 text-center">
+                <p className="text-[10px] font-mono tracking-wider text-neutral-500 uppercase">
+                  Click anywhere outside or press the Close button to dismiss
+                </p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       </div>
     </section>
