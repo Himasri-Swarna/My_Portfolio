@@ -140,7 +140,9 @@ export default function Hero({ onScrollToProjects, onScrollToContact, onScrollTo
               </button>
 
               <a
-                href="/Y_Himasri_Swarna_Resume.pdf"
+                href="https://files.catbox.moe/xx1xv9.pdf"
+                target="_blank"
+                rel="noreferrer"
                 download="Y_Himasri_Swarna_Resume.pdf"
                 className="px-4.5 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-400 hover:text-white text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 ml-auto sm:ml-0 no-underline"
               >
