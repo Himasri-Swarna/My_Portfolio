@@ -1,0 +1,379 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="100%" height="100%" style="background-color: #0d0e12; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a1c24" />
+      <stop offset="100%" stop-color="#0a0b0d" />
+    </radialGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ccff00" />
+      <stop offset="100%" stop-color="#a6e300" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c1e24" />
+      <stop offset="100%" stop-color="#121317" />
+    </linearGradient>
+    
+    <!-- Phone Mockup Shadows -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="15" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient background glow -->
+  <rect width="800" height="1100" fill="url(#bgGlow)" />
+  <circle cx="450" cy="550" r="350" fill="#ccff00" opacity="0.03" filter="blur(80px)" />
+  <circle cx="650" cy="250" r="250" fill="#00d4ff" opacity="0.02" filter="blur(60px)" />
+
+  <!-- LEFT HEADER AREA (Desktop layout feel aligned inside the graphic) -->
+  <g transform="translate(50, 80)">
+    <!-- OLA Brand Logo Mark -->
+    <g transform="translate(0, 0)">
+      <!-- Custom SVG Vector OLA Text Logo -->
+      <path d="M 0,25 C 0,11 11,0 25,0 C 39,0 50,11 50,25 C 50,39 39,50 25,50 C 11,50 0,39 0,25 Z M 12.5,25 C 12.5,32 18,37.5 25,37.5 C 32,37.5 37.5,32 37.5,25 C 37.5,18 32,12.5 25,12.5 C 18,12.5 12.5,18 12.5,25 Z" fill="#ffffff" />
+      <path d="M 60,0 L 73,0 L 73,38 L 96,38 L 96,48 L 60,48 Z" fill="#ffffff" />
+      <path d="M 124,0 L 138,0 L 152,48 L 138,48 L 135,36 L 113,36 L 110,48 L 96,48 Z M 124,10 L 116,26 L 132,26 Z" fill="#ffffff" />
+      <circle cx="163" cy="42" r="6" fill="#ccff00" />
+    </g>
+
+    <!-- Project Title -->
+    <text x="0" y="100" font-size="34" font-weight="800" fill="#ffffff" letter-spacing="-1">Application</text>
+    <text x="0" y="142" font-size="34" font-weight="800" fill="#ccff00" letter-spacing="-1">Redesign</text>
+
+    <!-- Line divider -->
+    <line x1="0" y1="180" x2="250" y2="180" stroke="#2a2c35" stroke-width="1" />
+
+    <!-- Summary Details -->
+    <text x="0" y="215" font-size="12" font-weight="700" fill="#8e929f" letter-spacing="1">OVERVIEW</text>
+    <text x="0" y="240" font-size="13" font-weight="400" fill="#b0b4c3" opacity="0.95">
+      <tspan x="0" dy="0">An exhaustive aesthetic and flow</tspan>
+      <tspan x="0" dy="20">restructuring of India's biggest</tspan>
+      <tspan x="0" dy="20">ridesharing mobile client, focusing</tspan>
+      <tspan x="0" dy="20">on driver-passenger connection</tspan>
+      <tspan x="0" dy="20">nodes, checkout steps and digital</tspan>
+      <tspan x="0" dy="20">map layout.</tspan>
+    </text>
+
+    <!-- Key Features List -->
+    <text x="0" y="380" font-size="12" font-weight="700" fill="#8e929f" letter-spacing="1">KEY FEATURES</text>
+    
+    <g transform="translate(0, 405)">
+      <!-- Check 1 -->
+      <circle cx="6" cy="-4" r="7" fill="#ccff00" fill-opacity="0.1" />
+      <path d="M 3,-5 L 5,-3 L 9,-7" stroke="#ccff00" stroke-width="1.5" fill="none" />
+      <text x="22" y="0" font-size="13" font-weight="500" fill="#ffffff">Simplified Booking Flow</text>
+
+      <!-- Check 2 -->
+      <g transform="translate(0, 26)">
+        <circle cx="6" cy="-4" r="7" fill="#ccff00" fill-opacity="0.1" />
+        <path d="M 3,-5 L 5,-3 L 9,-7" stroke="#ccff00" stroke-width="1.5" fill="none" />
+        <text x="22" y="0" font-size="13" font-weight="500" fill="#ffffff">Real-time Driver Tracking</text>
+      </g>
+
+      <!-- Check 3 -->
+      <g transform="translate(0, 52)">
+        <circle cx="6" cy="-4" r="7" fill="#ccff00" fill-opacity="0.1" />
+        <path d="M 3,-5 L 5,-3 L 9,-7" stroke="#ccff00" stroke-width="1.5" fill="none" />
+        <text x="22" y="0" font-size="13" font-weight="500" fill="#ffffff">Multiple Payment Options</text>
+      </g>
+
+      <!-- Check 4 -->
+      <g transform="translate(0, 78)">
+        <circle cx="6" cy="-4" r="7" fill="#ccff00" fill-opacity="0.1" />
+        <path d="M 3,-5 L 5,-3 L 9,-7" stroke="#ccff00" stroke-width="1.5" fill="none" />
+        <text x="22" y="0" font-size="13" font-weight="500" fill="#ffffff">Ride Safety Hub</text>
+      </g>
+    </g>
+
+    <!-- Tools Grid -->
+    <text x="0" y="540" font-size="12" font-weight="700" fill="#8e929f" letter-spacing="1">TOOLS INTEGRATED</text>
+    <g transform="translate(0, 560)">
+      <!-- Figma Badge -->
+      <rect x="0" y="0" width="55" height="26" rx="6" fill="#1e2028" stroke="#2e313d" stroke-width="1" />
+      <text x="14" y="17" font-size="11" font-weight="700" fill="#ff7262" font-family="monospace">Fig</text>
+
+      <!-- After Effects Badge -->
+      <rect x="62" y="0" width="55" height="26" rx="6" fill="#1e2028" stroke="#2e313d" stroke-width="1" />
+      <text x="78" y="17" font-size="11" font-weight="700" fill="#d670ff" font-family="monospace">Ae</text>
+
+      <!-- React Badge -->
+      <rect x="124" y="0" width="62" height="26" rx="6" fill="#1e2028" stroke="#2e313d" stroke-width="1" />
+      <text x="136" y="17" font-size="11" font-weight="700" fill="#00d4ff" font-family="monospace">React</text>
+    </g>
+  </g>
+
+  <!-- SCREEN Mockup 1: "Where to?" Route Selection (Left-middle top) -->
+  <g transform="translate(360, 50)" filter="url(#shadow)">
+    <!-- Device Frame -->
+    <rect width="190" height="320" rx="22" fill="#0d0e12" stroke="#2e313d" stroke-width="3" />
+    <!-- Screen View --->
+    <rect x="6" y="6" width="178" height="308" rx="16" fill="#131419" />
+    
+    <!-- Header Map UI Mockup -->
+    <!-- Simulated Map Grid Grid lines -->
+    <g opacity="0.15">
+      <line x1="10" y1="10" x2="180" y2="150" stroke="#7e8594" stroke-width="1" />
+      <line x1="50" y1="10" x2="10" y2="180" stroke="#7e8594" stroke-width="1" />
+      <line x1="100" y1="10" x2="180" y2="110" stroke="#7e8594" stroke-width="1" stroke-dasharray="3,3" />
+      <line x1="180" y1="60" x2="10" y2="110" stroke="#7e8594" stroke-width="1.5" />
+    </g>
+
+    <!-- Highlighted Lime Route Tracking Line -->
+    <path d="M 50,110 Q 110,60 140,40" fill="none" stroke="#ccff00" stroke-width="4.5" stroke-linecap="round" />
+    <!-- Destination pins -->
+    <circle cx="50" cy="110" r="5" fill="#ffffff" stroke="#131419" stroke-width="1.5" />
+    <circle cx="140" cy="40" r="4.5" fill="#ccff00" stroke="#131419" stroke-width="1.5" />
+
+    <!-- "Where to?" Panel Card -->
+    <rect x="14" y="145" width="162" height="155" rx="12" fill="#1c1e24" stroke="#2e313d" stroke-width="0.8" />
+    
+    <!-- Title -->
+    <text x="24" y="168" font-size="11" font-weight="700" fill="#ffffff">Where to?</text>
+    
+    <!-- Destination list items -->
+    <!-- Item 1 -->
+    <g transform="translate(24, 185)">
+      <circle cx="6" cy="4" r="5" fill="#3b82f6" />
+      <text x="18" y="7" font-size="10" font-weight="600" fill="#ffffff">Home</text>
+      <text x="18" y="17" font-size="8" font-weight="400" fill="#8e929f">123 MG Road, Bengaluru</text>
+    </g>
+    <!-- Item 2 -->
+    <g transform="translate(24, 218)">
+      <circle cx="6" cy="4" r="5" fill="#10b981" />
+      <text x="18" y="7" font-size="10" font-weight="600" fill="#ffffff">Work</text>
+      <text x="18" y="17" font-size="8" font-weight="400" fill="#8e929f">Manyata Tech Park, Bengaluru</text>
+    </g>
+    <!-- Item 3 -->
+    <g transform="translate(24, 251)">
+      <circle cx="6" cy="4" r="5" fill="#ea580c" />
+      <text x="18" y="7" font-size="10" font-weight="600" fill="#ffffff">Airport</text>
+      <text x="18" y="17" font-size="8" font-weight="400" fill="#8e929f">Kempegowda Int'l Airport</text>
+    </g>
+
+    <!-- Custom Floating Action add btn -->
+    <circle cx="152" cy="115" r="14" fill="#ccff00" />
+    <path d="M 148,115 L 156,115 M 152,111 L 152,119" stroke="#000000" stroke-width="2" />
+  </g>
+
+  <!-- SCREEN Mockup 2: "Choose a Ride" (Right top overlapping) -->
+  <g transform="translate(570, 110)" filter="url(#shadow)">
+    <!-- Device Frame -->
+    <rect width="190" height="320" rx="22" fill="#0d0e12" stroke="#2e313d" stroke-width="3" />
+    <!-- Screen View --->
+    <rect x="6" y="6" width="178" height="308" rx="16" fill="#131419" />
+
+    <!-- Screen Title -->
+    <text x="16" y="28" font-size="11" font-weight="700" fill="#ffffff">Choose a ride</text>
+
+    <!-- Ride options stack -->
+    <!-- Mini Card (Normal state) -->
+    <g transform="translate(14, 42)">
+      <rect width="162" height="52" rx="10" fill="#1c1e24" stroke="#2e313d" stroke-width="0.8" />
+      <!-- Simulated outline car icon block -->
+      <rect x="10" y="11" width="30" height="30" rx="5" fill="#2a2c35" />
+      <path d="M 18,31 C 18,29 20,24 25,24 C 30,24 32,29 32,31 Z" fill="#7e8594" />
+      <circle cx="21" cy="33" r="3" fill="#131419" />
+      <circle cx="29" cy="33" r="3" fill="#131419" />
+      <!-- Texts -->
+      <text x="48" y="22" font-size="10" font-weight="700" fill="#ffffff">Mini</text>
+      <text x="48" y="34" font-size="8" font-weight="400" fill="#8e929f">4 mins away</text>
+      <text x="122" y="29" font-size="11" font-weight="700" fill="#ffffff">₹120</text>
+    </g>
+
+    <!-- Prime Card (Selected / Prime state highlighted with neon brand border) -->
+    <g transform="translate(14, 102)">
+      <rect width="162" height="52" rx="10" fill="#1c1e24" stroke="#ccff00" stroke-width="1.5" />
+      <!-- Simulated outline car icon block -->
+      <rect x="10" y="11" width="30" height="30" rx="5" fill="#2e3810" />
+      <path d="M 18,31 C 18,29 20,24 25,24 C 30,24 32,29 32,31 Z" fill="#ccff00" />
+      <circle cx="21" cy="33" r="3" fill="#131419" />
+      <circle cx="29" cy="33" r="3" fill="#131419" />
+      <!-- Texts -->
+      <text x="48" y="22" font-size="10" font-weight="700" fill="#ccff00">Prime</text>
+      <text x="48" y="34" font-size="8" font-weight="500" fill="#a6e300">2 mins away</text>
+      <text x="122" y="29" font-size="11" font-weight="700" fill="#ccff00">₹210</text>
+    </g>
+
+    <!-- Auto Card (Normal) -->
+    <g transform="translate(14, 162)">
+      <rect width="162" height="52" rx="10" fill="#1c1e24" stroke="#2e313d" stroke-width="0.8" />
+      <!-- Simulated auto icon block -->
+      <rect x="10" y="11" width="30" height="30" rx="5" fill="#2a2c35" />
+      <!-- Texts -->
+      <text x="48" y="22" font-size="10" font-weight="700" fill="#ffffff">Auto</text>
+      <text x="48" y="34" font-size="8" font-weight="400" fill="#8e929f">3 mins away</text>
+      <text x="126" y="29" font-size="11" font-weight="700" fill="#ffffff">₹80</text>
+    </g>
+
+    <!-- Bike Card (Normal) -->
+    <g transform="translate(14, 222)">
+      <rect width="162" height="52" rx="10" fill="#1c1e24" stroke="#2e313d" stroke-width="0.8" />
+      <rect x="10" y="11" width="30" height="30" rx="5" fill="#2a2c35" />
+      <!-- Texts -->
+      <text x="48" y="22" font-size="10" font-weight="700" fill="#ffffff">Bike</text>
+      <text x="48" y="34" font-size="8" font-weight="400" fill="#8e929f">2 mins away</text>
+      <text x="128" y="29" font-size="11" font-weight="700" fill="#ffffff">₹60</text>
+    </g>
+
+    <!-- Button -->
+    <rect x="14" y="280" width="162" height="26" rx="6" fill="#ccff00" />
+    <text x="95" y="297" font-size="9" font-weight="800" fill="#000000" text-anchor="middle">CONFIRM PRIME</text>
+  </g>
+
+  <!-- SCREEN Mockup 3: "Driver on the way" (Left-middle bottom) -->
+  <g transform="translate(360, 400)" filter="url(#shadow)">
+    <!-- Device Frame -->
+    <rect width="190" height="320" rx="22" fill="#0d0e12" stroke="#2e313d" stroke-width="3" />
+    <!-- Screen View --->
+    <rect x="6" y="6" width="178" height="308" rx="16" fill="#131419" />
+
+    <!-- Simulated Map Layout -->
+    <g opacity="0.15">
+      <line x1="20" y1="10" x2="20" y2="180" stroke="#7e8594" stroke-width="1" />
+      <line x1="10" y1="80" x2="180" y2="80" stroke="#7e8594" stroke-width="1" />
+      <line x1="110" y1="10" x2="110" y2="190" stroke="#7e8594" stroke-width="1.5" />
+    </g>
+    <path d="M 110,130 L 110,80 L 40,80" fill="none" stroke="#ccff00" stroke-width="4.5" stroke-linecap="round" />
+    <circle cx="40" cy="80" r="5" fill="#ffffff" stroke="#131419" stroke-width="1.5" />
+
+    <!-- Driver Card Sheet Overlay -->
+    <rect x="14" y="145" width="162" height="155" rx="12" fill="#1c1e24" stroke="#2e313d" stroke-width="0.8" />
+
+    <!-- Header status within sheet -->
+    <text x="24" y="165" font-size="11" font-weight="700" fill="#ffffff">Driver on the way</text>
+    
+    <!-- Vehicle Plate details -->
+    <rect x="24" y="174" width="75" height="15" rx="4" fill="#000000" stroke="#2e313d" stroke-width="0.5" />
+    <text x="61" y="185" font-size="8" font-weight="700" fill="#ccff00" text-anchor="middle">KA 03 AB 1234</text>
+    <text x="105" y="185" font-size="8" font-weight="400" fill="#8e929f">White Dzire</text>
+
+    <line x1="24" y1="200" x2="166" y2="200" stroke="#2e313d" stroke-width="0.8" />
+
+    <!-- Driver profile row -->
+    <!-- Profile picture shape -->
+    <circle cx="42" cy="225" r="16" fill="#2a2c35" stroke="#ccff00" stroke-width="1" />
+    <!-- Mini face vectors -->
+    <circle cx="42" cy="221" r="5" fill="#ffffff" opacity="0.9" />
+    <path d="M 34,233 A 8,8 0 0,1 50,233 Z" fill="#ffffff" opacity="0.9" />
+
+    <text x="66" y="223" font-size="10" font-weight="700" fill="#ffffff">Ramesh Kumar</text>
+    <text x="66" y="235" font-size="8" font-weight="500" fill="#ccff00">★ 4.8 <tspan fill="#8e929f">· 2,342 rides</tspan></text>
+
+    <!-- Communication action buttons -->
+    <g transform="translate(24, 255)">
+      <!-- Call button -->
+      <rect width="64" height="22" rx="6" fill="#2a2c35" />
+      <text x="32" y="14" font-size="8" font-weight="600" fill="#ffffff" text-anchor="middle">Call Driver</text>
+      
+      <!-- Chat button -->
+      <rect x="74" y="0" width="64" height="22" rx="6" fill="#ccff00" />
+      <text x="106" y="14" font-size="8" font-weight="700" fill="#000000" text-anchor="middle">Chat</text>
+    </g>
+  </g>
+
+  <!-- SCREEN Mockup 4: "Payment Checkout" (Right bottom overlapping) -->
+  <g transform="translate(570, 460)" filter="url(#shadow)">
+    <!-- Device Frame -->
+    <rect width="190" height="320" rx="22" fill="#0d0e12" stroke="#2e313d" stroke-width="3" />
+    <!-- Screen View --->
+    <rect x="6" y="6" width="178" height="308" rx="16" fill="#131419" />
+
+    <!-- Screen Title -->
+    <text x="16" y="28" font-size="11" font-weight="700" fill="#ffffff">Payment Checkout</text>
+
+    <!-- Fare Summary Panel -->
+    <rect x="14" y="40" width="162" height="42" rx="10" fill="#1c1e24" />
+    <text x="24" y="58" font-size="9" font-weight="400" fill="#8e929f">Total Fare</text>
+    <text x="24" y="72" font-size="12" font-weight="800" fill="#ffffff">₹210.00</text>
+    <text x="156" y="65" font-size="10" font-weight="700" fill="#ccff00" text-anchor="end">PRIME RIDE</text>
+
+    <text x="16" y="105" font-size="9" font-weight="700" fill="#8e929f" letter-spacing="0.5">RECOMMENDED PAYMENT</text>
+
+    <!-- Payment Item 1 (Selected) -->
+    <g transform="translate(14, 115)">
+      <rect width="162" height="40" rx="10" fill="#1c1e24" stroke="#ccff00" stroke-width="1.2" />
+      <!-- UPI icon pattern -->
+      <circle cx="22" cy="20" r="10" fill="#1d301b" />
+      <text x="22" y="23" font-size="8" font-weight="800" fill="#ccff00" text-anchor="middle">UPI</text>
+
+      <text x="42" y="18" font-size="9" font-weight="700" fill="#ffffff">Google Pay / PhonePe</text>
+      <text x="42" y="28" font-size="7" font-weight="400" fill="#8e929f">Pay instantly via secure API</text>
+      <!-- Custom checked radio -->
+      <circle cx="146" cy="20" r="5" fill="#ccff00" />
+      <circle cx="146" cy="20" r="2" fill="#131419" />
+    </g>
+
+    <!-- Payment Item 2 (Ola Money) -->
+    <g transform="translate(14, 162)">
+      <rect width="162" height="40" rx="10" fill="#1c1e24" stroke="#2e313d" stroke-width="0.8" />
+      <!-- Ola Wallet icon -->
+      <circle cx="22" cy="20" r="10" fill="#2a2c35" />
+      <circle cx="22" cy="20" r="5" fill="#ffffff" opacity="0.3" />
+
+      <text x="42" y="18" font-size="9" font-weight="700" fill="#ffffff">Ola Money Wallet</text>
+      <text x="42" y="28" font-size="7" font-weight="400" fill="#8e929f">Balance: ₹450.00</text>
+      <!-- Custom unchecked radio -->
+      <circle cx="146" cy="20" r="5" stroke="#7e8594" stroke-width="1" fill="none" />
+    </g>
+
+    <text x="16" y="222" font-size="9" font-weight="700" fill="#8e929f" letter-spacing="0.5">ALTERNATIVE METHODS</text>
+
+    <!-- Debit/Credit Card option -->
+    <g transform="translate(14, 230)">
+      <rect width="162" height="30" rx="8" fill="#1c1e24" />
+      <text x="14" y="18" font-size="9" font-weight="600" fill="#ffffff">Credit / Debit Card</text>
+      <path d="M 148,12 L 152,15 L 148,18" stroke="#ffffff" stroke-width="1" fill="none" />
+    </g>
+
+    <!-- Netbanking -->
+    <g transform="translate(14, 265)">
+      <rect width="162" height="30" rx="8" fill="#1c1e24" />
+      <text x="14" y="18" font-size="9" font-weight="600" fill="#ffffff">Netbanking Channels</text>
+      <path d="M 148,12 L 152,15 L 148,18" stroke="#ffffff" stroke-width="1" fill="none" />
+    </g>
+
+    <!-- Pay now trigger button -->
+    <rect x="14" y="300" width="162" height="2" rx="1" fill="#ccff00" />
+  </g>
+
+  <!-- RATING INTERFACE MODAL PREVIEW (Floating central) -->
+  <g transform="translate(460, 290)" filter="url(#shadow)">
+    <rect width="180" height="150" rx="16" fill="#1c1e24" stroke="#ccff00" stroke-width="1.5" />
+    <text x="90" y="28" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">Rate your ride</text>
+    <text x="90" y="42" font-size="8" font-weight="400" fill="#8e929f" text-anchor="middle">How was your trip with Ramesh?</text>
+
+    <!-- 5 gold stars group -->
+    <g transform="translate(30, 56)">
+      <!-- Star 1 -->
+      <path d="M 10,2 L 13,8 L 19,9 L 14,13 L 16,19 L 10,16 L 4,19 L 6,13 L 1,9 L 7,8 Z" fill="#ccff00" />
+      <!-- Star 2 -->
+      <path transform="translate(24, 0)" d="M 10,2 L 13,8 L 19,9 L 14,13 L 16,19 L 10,16 L 4,19 L 6,13 L 1,9 L 7,8 Z" fill="#ccff00" />
+      <!-- Star 3 -->
+      <path transform="translate(48, 0)" d="M 10,2 L 13,8 L 19,9 L 14,13 L 16,19 L 10,16 L 4,19 L 6,13 L 1,9 L 7,8 Z" fill="#ccff00" />
+      <!-- Star 4 -->
+      <path transform="translate(72, 0)" d="M 10,2 L 13,8 L 19,9 L 14,13 L 16,19 L 10,16 L 4,19 L 6,13 L 1,9 L 7,8 Z" fill="#ccff00" />
+      <!-- Star 5 -->
+      <path transform="translate(96, 0)" d="M 10,2 L 13,8 L 19,9 L 14,13 L 16,19 L 10,16 L 4,19 L 6,13 L 1,9 L 7,8 Z" fill="#ccff00" />
+    </g>
+
+    <!-- Microtip chips -->
+    <g transform="translate(18, 92)">
+      <rect width="40" height="18" rx="5" fill="#2a2c35" />
+      <text x="20" y="11" font-size="7" font-weight="600" fill="#ffffff" text-anchor="middle">Tip ₹20</text>
+
+      <rect x="46" y="0" width="48" height="18" rx="5" fill="#ccff00" />
+      <text x="70" y="11" font-size="7" font-weight="700" fill="#000000" text-anchor="middle">Tip ₹50</text>
+
+      <rect x="100" y="0" width="44" height="18" rx="5" fill="#2a2c35" />
+      <text x="122" y="11" font-size="7" font-weight="600" fill="#ffffff" text-anchor="middle">Tip ₹100</text>
+    </g>
+
+    <!-- Submission CTA -->
+    <rect x="18" y="120" width="144" height="20" rx="5" fill="#2a2c35" />
+    <text x="90" y="132" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">Submit Rating</text>
+  </g>
+</svg>

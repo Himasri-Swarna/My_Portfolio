@@ -76,6 +76,19 @@ export default function Projects() {
                     project.category === 'AI/ML' ? 'from-[#00D4FF] to-blue-500' : 'from-[#8B5CF6] to-pink-500'
                   }`} />
 
+                  {/* Hyper-realistic Project Thumbnail Illustration */}
+                  {project.imageUrl && (
+                    <div className="h-44 w-full relative overflow-hidden bg-neutral-950 border-b border-white/5 select-none pointer-events-none">
+                      <img
+                        src={project.imageUrl}
+                        alt={project.name}
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c]/80 via-transparent to-[#0a0a0c]/20" />
+                    </div>
+                  )}
+
                   {/* Body elements container */}
                   <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                     

@@ -43,7 +43,8 @@ export const PROJECTS_DATA: Project[] = [
       "Showcased key local-language offline accessibility to state regulators & advisors"
     ],
     githubUrl: "https://github.com/Himasri-Swarna",
-    category: "AI/ML"
+    category: "AI/ML",
+    imageUrl: "https://files.catbox.moe/xjq6vu.png"
   },
   {
     id: "drug-discovery",
@@ -61,7 +62,8 @@ export const PROJECTS_DATA: Project[] = [
       "Engineered machine learning pipelines that process validation in under 4 weeks"
     ],
     githubUrl: "https://github.com/Himasri-Swarna",
-    category: "AI/ML"
+    category: "AI/ML",
+    imageUrl: "https://files.catbox.moe/kdrxxs.png"
   },
   {
     id: "ola-redesign",
@@ -78,7 +80,8 @@ export const PROJECTS_DATA: Project[] = [
       "Improvised booking workflow path, boosting navigation speed by 30%",
       "Achieved a 15% increase in verified System Usability Scale (SUS) scores"
     ],
-    category: "UI/UX"
+    category: "UI/UX",
+    imageUrl: "https://files.catbox.moe/063i6k.png"
   }
 ];
 

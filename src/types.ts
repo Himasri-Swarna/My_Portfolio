@@ -9,6 +9,7 @@ export interface Project {
   githubUrl?: string;
   demoUrl?: string;
   category: 'AI/ML' | 'Web' | 'UI/UX';
+  imageUrl?: string;
 }
 
 export interface Experience {
