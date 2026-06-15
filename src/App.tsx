@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "motion/react";
-import { ArrowUp, Menu, X, Sparkles, Clock, Globe } from "lucide-react";
+import { ArrowUp, Menu, X, Sparkles, Clock, Globe, Mail, Github, Linkedin, Phone } from "lucide-react";
 
 // Sub-component Imports
 import ParticleBackground from "./components/ParticleBackground";
@@ -83,17 +83,76 @@ export default function App() {
       {/* Background Ambience particles */}
       <ParticleBackground />
 
-      {/* Top scroll progress indicator thread */}
+      {/* Sleek Top Contact Utility Bar */}
+      <div className="fixed top-0 left-0 right-0 h-10 bg-[#030306]/90 border-b border-white/10 z-50 backdrop-blur-md flex items-center select-none">
+        <div className="w-full max-w-6xl mx-auto px-4 lg:px-8 flex items-center justify-between font-mono text-[10px] sm:text-[11px]">
+          
+          {/* Left Side Status Node */}
+          <div className="flex items-center gap-3 text-neutral-400">
+            <span 
+              className="flex items-center gap-1.5 hover:text-[#00D4FF] transition-all cursor-pointer" 
+              onClick={() => scrollToSection("contact")}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="font-semibold tracking-tight text-neutral-200">Open for Placements &amp; Internships</span>
+            </span>
+            <span className="hidden md:inline text-neutral-800">|</span>
+            <span className="hidden md:inline text-neutral-400">Visakhapatnam, IN</span>
+          </div>
+
+          {/* Right Side Instant Contact Paths */}
+          <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
+            <a 
+              href={`mailto:${PORTFOLIO_OWNER.email}`} 
+              className="flex items-center gap-1.5 text-neutral-300 hover:text-[#00D4FF] transition-all font-medium"
+              title="Send Direct Email"
+            >
+              <Mail className="w-3.5 h-3.5 text-[#00D4FF]" />
+              <span className="hidden sm:inline">{PORTFOLIO_OWNER.email}</span>
+              <span className="sm:hidden text-[10px]">Email</span>
+            </a>
+
+            <span className="text-neutral-800 font-normal">|</span>
+
+            <a 
+              href={PORTFOLIO_OWNER.github} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="flex items-center gap-1.5 text-neutral-300 hover:text-white transition-all font-medium"
+              title="GitHub Profile"
+            >
+              <Github className="w-3.5 h-3.5 text-[#8B5CF6]" />
+              <span>GitHub</span>
+            </a>
+
+            <span className="text-neutral-800 font-normal">|</span>
+
+            <a 
+              href={PORTFOLIO_OWNER.linkedin} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="flex items-center gap-1.5 text-neutral-300 hover:text-[#00D4FF] transition-all font-medium"
+              title="LinkedIn Profile"
+            >
+              <Linkedin className="w-3.5 h-3.5 text-[#00D4FF]" />
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Top scroll progress indicator thread, shifted down by top-bar height */}
       <motion.div 
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00D4FF] via-[#8B5CF6] to-emerald-400 z-50 origin-left" 
+        className="fixed top-10 left-0 right-0 h-1 bg-gradient-to-r from-[#00D4FF] via-[#8B5CF6] to-emerald-400 z-50 origin-left" 
         style={{ scaleX }}
       />
 
       {/* Main Header navigation bar */}
       <header className={`fixed left-4 right-4 z-40 transition-all duration-300 max-w-6xl mx-auto rounded-full border ${
         isScrolled 
-          ? "top-3 py-2 bg-[#050508]/85 border-white/10 backdrop-blur-xl shadow-2xl px-5" 
-          : "top-4 py-3 bg-white/5 border-white/10 px-5 backdrop-blur-md"
+          ? "top-[50px] py-1.5 bg-[#050508]/85 border-white/10 backdrop-blur-xl shadow-2xl px-5" 
+          : "top-14 py-3 bg-white/5 border-white/10 px-5 backdrop-blur-md"
       }`}>
         <div className="mx-auto flex items-center justify-between">
           
@@ -166,7 +225,9 @@ export default function App() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-[74px] left-4 right-4 z-30 bg-[#07070a]/95 border border-white/10 backdrop-blur-2xl xl:hidden overflow-hidden py-6 rounded-3xl shadow-2xl"
+            className={`fixed left-4 right-4 z-30 bg-[#07070a]/95 border border-white/10 backdrop-blur-2xl xl:hidden overflow-hidden py-6 rounded-3xl shadow-2xl transition-all duration-300 ${
+              isScrolled ? "top-[106px]" : "top-[118px]"
+            }`}
           >
             <div className="container mx-auto px-4 flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -198,8 +259,8 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Main Core Section Stream Blocks */}
-      <main className="relative pt-[70px]">
+      {/* Main Core Section Stream Blocks, adjusted top padding to clean the top-bar and header spacing */}
+      <main className="relative pt-[114px]">
         
         {/* HERO SECTION */}
         <Hero 
