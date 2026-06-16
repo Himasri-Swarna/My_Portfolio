@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Inquiry": {
+      "title": "Inquiry",
+      "description": "A contact submission containing professional opportunities, interview schedules, or feedback.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name or corporate agency representing the recruiter/sender."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Contact email pointer of the sender."
+        },
+        "subject": {
+          "type": "string",
+          "description": "Class or category subject representing their business intent."
+        },
+        "message": {
+          "type": "string",
+          "description": "Detailed message context containing proposal coordinates."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of creation."
+        }
+      },
+      "required": ["name", "email", "subject", "message", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/inquiries/{inquiryId}": {
+      "schema": "Inquiry",
+      "description": "User contact and recruitment propositions ledger."
+    }
+  }
+}

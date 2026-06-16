@@ -80,8 +80,66 @@ export const PROJECTS_DATA: Project[] = [
       "Improvised booking workflow path, boosting navigation speed by 30%",
       "Achieved a 15% increase in verified System Usability Scale (SUS) scores"
     ],
+    githubUrl: "https://github.com/Himasri-Swarna/Ola-Redesign",
     category: "UI/UX",
     imageUrl: "https://files.catbox.moe/063i6k.png"
+  },
+  {
+    id: "nexora",
+    name: "Nexora – AI-Augmented Multi-Agent Collaborative Framework",
+    description: "A high-performance modern web system orchestrating local and cloud AI agent pipelines to automate complex code refactoring and smart environment diagnostics.",
+    problemSolved: "Developers experience friction when managing individual prompts and multi-model API tasks in isolation without any synchronized workspace container.",
+    technologies: ["React", "TypeScript", "Node.js", "Express", "Socket.io", "Gemini Pro API"],
+    features: [
+      "Simulated real-time streaming sockets rendering continuous assistant feedback",
+      "Dynamic multi-agent team architecture balancing model contextual weight distribution",
+      "Optimized browser sandboxes designed for hot-reload responsive previews"
+    ],
+    impact: [
+      "Accelerated boilerplate workflow execution speeds by over 40% on test suites",
+      "Implemented seamless schema persistence layers guaranteeing sub-second load times"
+    ],
+    githubUrl: "https://github.com/Himasri-Swarna/Nexora",
+    category: "Web",
+    imageUrl: "https://files.catbox.moe/g4m0tw.png"
+  },
+  {
+    id: "the-sahara",
+    name: "The Sahara – Intelligent Interior & Home Study Space Optimizer",
+    description: "An interactive spatial layout system designed to convert disorganized, cluttered residential areas into highly organized, ergonomic, and productive home study spaces.",
+    problemSolved: "Students and remote professionals struggle with small or chaotic home layouts, lacking intuitive digital guides to map underutilized corners into structured workstations.",
+    technologies: ["React", "Three.js", "D3.js", "Tailwind CSS", "TypeScript", "Vite"],
+    features: [
+      "Dynamic 2D/3D floor-plan optimizer rendering responsive space utilization patterns",
+      "Smart zoning engine analyzing illumination nodes to designate quiet, low-distraction study units",
+      "Glassmorphic planning panel with interactive furniture placement guides"
+    ],
+    impact: [
+      "Helped test participants repurpose up to 35% of cluttered room volume into dedicated study zones",
+      "Praised by design layout panels for its highly sleek, human-centered architectural approach"
+    ],
+    githubUrl: "https://github.com/Himasri-Swarna/The-Sahara",
+    category: "Web",
+    imageUrl: "https://files.catbox.moe/0gd96d.png"
+  },
+  {
+    id: "future-me-os",
+    name: "Future Me OS – AI-Powered Life Path Projection System",
+    description: "An immersive personal dashboard leveraging generative models and life-planning frameworks to help track career targets and simulate future scenarios.",
+    problemSolved: "Generic goal trackers provide uninspiring forms that fail to keep students driven or simulate realistic long-range professional pathways.",
+    technologies: ["Python", "React", "Gemini SDK", "localStorage Persistence", "Framer Motion"],
+    features: [
+      "Custom path compilation matrices plotting success vectors against daily metrics",
+      "Immersive simulation dialog terminals loaded with historic persona prompt weights",
+      "Beautiful custom progress charts mapping habit metrics into dynamic visual constellations"
+    ],
+    impact: [
+      "Created highly persistent engagement models reducing habit abandonment rates",
+      "Awarded perfect compliant rankings during NxtCode collaborative building sprints"
+    ],
+    githubUrl: "https://github.com/Himasri-Swarna/Future-Me-OS",
+    category: "AI/ML",
+    imageUrl: "https://files.catbox.moe/1devmk.png"
   }
 ];
 

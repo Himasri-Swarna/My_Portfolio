@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, Sparkles, Github, Linkedin, HelpCircle } from "lucide-react";
 import { PORTFOLIO_OWNER } from "../data";
+import { db, OperationType, handleFirestoreError } from "../lib/firebase";
+import { collection, doc, setDoc, serverTimestamp } from "firebase/firestore";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -40,7 +42,7 @@ export default function ContactForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errors = validate();
     if (Object.keys(errors).length > 0) {
@@ -50,12 +52,32 @@ export default function ContactForm() {
 
     setIsSubmitting(true);
 
-    // Simulate reliable form logging/transmission
-    setTimeout(() => {
+    try {
+      const inquiriesRef = collection(db, "inquiries");
+      const newDocRef = doc(inquiriesRef);
+      await setDoc(newDocRef, {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        subject: formData.subject.trim(),
+        message: formData.message.trim(),
+        createdAt: serverTimestamp()
+      });
       setIsSubmitting(false);
       setSubmitSuccess(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
-    }, 1500);
+    } catch (error) {
+      console.error("Firebase insertion error:", error);
+      try {
+        handleFirestoreError(error, OperationType.WRITE, "inquiries");
+      } catch (nestedErr) {
+        // Log formatted error according to firebase-integration guidelines
+      }
+      setFormErrors((prev) => ({
+        ...prev,
+        submit: "The pipeline encountered a connection issue. Please verify your internet or try again."
+      }));
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -254,6 +276,13 @@ export default function ContactForm() {
                       )}
                     </div>
                   </div>
+
+                  {formErrors.submit && (
+                    <div className="p-3.5 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-mono flex items-center gap-2.5">
+                      <AlertCircle className="w-4 h-4 shrink-0" />
+                      <span>{formErrors.submit}</span>
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <div className="pt-2">

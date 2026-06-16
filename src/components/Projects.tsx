@@ -5,7 +5,7 @@ import { PROJECTS_DATA } from "../data";
 import { Project } from "../types";
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState<'All' | 'AI/ML' | 'UI/UX'>('All');
+  const [activeCategory, setActiveCategory] = useState<'All' | 'AI/ML' | 'Web' | 'UI/UX'>('All');
   const [expandedProjectId, setExpandedProjectId] = useState<string | null>(null);
   const [selectedImageUrl, setSelectedImageUrl] = useState<string | null>(null);
 
@@ -38,7 +38,7 @@ export default function Projects() {
 
         {/* Filter Navigation Tabs - Pill styled */}
         <div className="flex justify-center items-center gap-2.5 mb-10">
-          {(['All', 'AI/ML', 'UI/UX'] as const).map((cat) => (
+          {(['All', 'AI/ML', 'Web', 'UI/UX'] as const).map((cat) => (
             <button
               key={cat}
               onClick={() => {
@@ -74,7 +74,11 @@ export default function Projects() {
                   
                   {/* Decorative gradient strip */}
                   <div className={`h-1.5 w-full bg-gradient-to-r ${
-                    project.category === 'AI/ML' ? 'from-[#00D4FF] to-blue-500' : 'from-[#8B5CF6] to-pink-500'
+                    project.category === 'AI/ML' 
+                      ? 'from-[#00D4FF] to-blue-500' 
+                      : project.category === 'Web'
+                      ? 'from-emerald-400 to-teal-500'
+                      : 'from-[#8B5CF6] to-pink-500'
                   }`} />
 
                   {/* Hyper-realistic Project Thumbnail Illustration */}
@@ -106,7 +110,13 @@ export default function Projects() {
                     
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-[9px] font-mono uppercase bg-black/60 border border-white/10 px-2.5 py-1 rounded-lg text-[#00D4FF] font-bold">
+                        <span className={`text-[9px] font-mono uppercase bg-black/60 border border-white/10 px-2.5 py-1 rounded-lg font-bold ${
+                          project.category === 'AI/ML' 
+                            ? 'text-[#00D4FF]' 
+                            : project.category === 'Web'
+                            ? 'text-emerald-400'
+                            : 'text-[#8B5CF6]'
+                        }`}>
                           {project.category}
                         </span>
                         {project.githubUrl && (
@@ -121,7 +131,13 @@ export default function Projects() {
                         )}
                       </div>
 
-                      <h3 className="text-white font-bold text-base leading-snug group-hover:text-[#00D4FF] transition-colors">
+                      <h3 className={`font-bold text-base leading-snug transition-colors ${
+                        project.category === 'AI/ML'
+                          ? 'text-white group-hover:text-[#00D4FF]'
+                          : project.category === 'Web'
+                          ? 'text-white group-hover:text-emerald-400'
+                          : 'text-white group-hover:text-[#8B5CF6]'
+                      }`}>
                         {project.name}
                       </h3>
 
